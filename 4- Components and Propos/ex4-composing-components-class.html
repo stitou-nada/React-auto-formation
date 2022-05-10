@@ -15,21 +15,31 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        
-      
+            
         
         class Welcome extends React.Component {
             render(){
-                return <h1>Hello, { this.props.name }</h1>
+               return <div>{this.props.name}</div>
+            }
+      }
+        
+      class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Welcome name="nada"/> 
+                        <Welcome name="stitou"/> 
+                    </div>  
+                )
+               
             }
         }
 
         const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(<Welcome name="stitou"/>);
+        root.render(<App />);
 
 
     </script>
 </body>
-
 
 </html>
